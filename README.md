@@ -1,35 +1,25 @@
 # MicroClientPrivateStarter
 _A quickstart project that quickly/easily bootstraps a testable/deployable/runnable authenticated 
-Angular micro-frontend(a.k.a. **miffy**) that encourages rapid iteration and supports micro-cms content in the form of GraphQL datasources.
+Angular micro-frontend(a.k.a. **mife**) that encourages rapid iteration and supports micro-cms content in the form of GraphQL datasources.
 Because our of the shared common purpose, **we are quick to respond to your hackathon team needs... your win IS our win!**_
 
+We value your perspective and invite you to participate regardless of skill-level.
+
 ----
-**Caution:**  Be aware this project is heavily-opinionated with a bias towards action and to the Nodejs(Typescript)/GoLang/Angular(CLI)/Google(GCP)/Kubernetes ecosystems and will be quick to contribute early/often any opinions, preferably in code,
-to any relevant dependencies that share our penchant.
 
-Your feedback and perspective is **ALWAYS** valued.  Chances are, if this broad ecosystem(s) is not to your liking or important to your world, 
-then this project is probably not quite right for you, feel free to quietly move along.
+**Caution:**  This project is heavily-opinionated with bias towards Nodejs(Typescript)/GoLang/Angular(CLI)/Google(GCP)/Kubernetes. 
 
-We do avidly pursue a better way to quickly develop/deploy miffys and their supporting architectures, however, we do not necessarily consider ourselves
-experts in any facet of this endeavor, nor do we strive to promote our own brilliance beyond the wisdom of our own crowd that share a common curiousity and 
-enthusiasm to expose ourselves to the broadest spectrun of technology without the PITA associated with things that do not matter, so we can see concepts in
-an always-on mode.  None of us is smarter than all of you.  IOWs, we are interested in the conversation not in your pursuit of reputation, so, as always,
-a little humility, enthusiasm, and respect for the weakest among us is a big deal, d-bags need not apply.  Maybe help each other out, especially us newbs,
-we want to be productive, participate, and contribute across the broadest possible spectrum of development.
+A few goals of the overarching project:
 
-This project will ALWAYS invite your "dumb" questions and other sorts of valuable contributions that you might wish to offer!  Thanks!!
-
-A few commitments for which this project strives are to:
-
-- Opt first for include and embrace anyone who wishes to participate, without judgement.
 - Run the latest lts node implementation
 - Run the latest of angular cli
-- Use `ng new <PROJECT NAME>` to create a new miffy
+- Use `ng new <PROJECT NAME>` to create a new mife
 - Use @angular/schematics wherever available to install libraries
-- Use @angular/cli best practice and default libraries where conflicts with miffy best practices are not present
+- Use @angular/cli best practice and default libraries where conflicts with mife best practices are not present
 - Use the latest library version of the most active project that serves the need
 - All changes must pass 100% of available tests **with 90% coverage** before they can be accepted 
 - Deployable and testable exclusively on GCP infrastructure using tools that optimize as such, and opting for support of other cloud-based infrastructures where practical. 
+- Opt first for include and embrace anyone who wishes to participate, without judgement.
 
 This project was initially generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.3 and can be fully reproduced from scratch
 by cloning micro-client-public-starter and applying the following updates: 
@@ -42,17 +32,18 @@ by cloning micro-client-public-starter and applying the following updates:
 1. `npm i -s firebase @angular/fire`
 1. `npm i -s material-design-icons`
 
-Due to [this bug]() the schematic that is available for the [ngx-auth-firebaseui](https://ngx-auth-firebaseui.firebaseapp.com/getting-started) project dies in npm dependency hell.
-Until this bug is fixed you can copy all subdirectories under node_modules.tmp directly into your node_modules directory and all should be right with the world.
+Due to [this bug](https://github.com/AnthonyNahas/ngx-auth-firebaseui/pull/615) the schematic that is available for the [ngx-auth-firebaseui](https://ngx-auth-firebaseui.firebaseapp.com/getting-started)
+repo dies in dependency hell. Until the bug is fixed you can recursively copy all subdirectories under **node_modules.tmp** directly into your node_modules directory and all should be right with the world.
 
 
 ----
+
 # Quickstart
 
 `vi .fd.<ROOT_DOMAIN>`  -- Update the first few variables to meet your needs
 
     typically modify:
-        FD_TARGET_LOCAL_PORT    -- the localhost port used for Docker mapping (s/b unique to miffy realm and match npm start port))
+        FD_TARGET_LOCAL_PORT    -- the localhost port used for Docker mapping (s/b unique to mife realm and match npm start port))
         FD_NICKNAME             -- the base route for all requests(peferably relevant to service function)
         FD_TARGET_REALM         -- the subdomain that will serve the realm(must end with a dot)(appended to the root domain to form the auth realm)
 
@@ -69,6 +60,10 @@ Search/Replace all instances 'micro-client-private-starter' with your repo name/
 
 Lastly, update this README with your relevant deets.
 
+----
+Todo
+
+- Re-enable the CMS micro-service to serve arbitrary content from **micro-client-public-starter**
 ----
 # Angular Boilerplate Docs
 ## Development server

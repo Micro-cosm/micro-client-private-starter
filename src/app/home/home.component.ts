@@ -3,7 +3,6 @@
 import { environment		} from '../../environments/environment';
 import { AngularFireAuth	} from '@angular/fire/auth';
 import { Component 			} from '@angular/core';
-import { User 				} from '../_models/user';
 
 @Component({
 	selector: 'app-home',
